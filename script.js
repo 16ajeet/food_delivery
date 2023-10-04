@@ -232,6 +232,17 @@ document.addEventListener("DOMContentLoaded", function () {
         displayRecipes(filteredRecipes);
     }
 
+    function toggleMenuIcon() {
+        if (window.innerWidth <= 786) {
+            nav.style.display = "none"; // Hide the navigation bar
+            openDrawerButton.style.display = "block"; // Show the menu icon
+        } else {
+            nav.style.display = "flex"; // Display the navigation bar
+            openDrawerButton.style.display = "none"; // Hide the menu icon
+            mobileDrawer.style.display = "none"; // Hide the mobile drawer
+        }
+    }
+
     ratingFilterAbove.addEventListener("click", () => {
         filterByRating(4.0, true);
     });
@@ -249,17 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
         mobileDrawer.style.display = "none";
     });
 
-    // Toggle menu icon for screens with width 786px or less
-    function toggleMenuIcon() {
-        if (window.innerWidth <= 786) {
-            nav.style.display = "none"; // Hide the navigation bar
-            openDrawerButton.style.display = "block"; // Show the menu icon
-        } else {
-            nav.style.display = "flex"; // Display the navigation bar
-            openDrawerButton.style.display = "none"; // Hide the menu icon
-            mobileDrawer.style.display = "none"; // Hide the mobile drawer
-        }
-    }
+   
 
     // Initial check and event listener for screen width
     toggleMenuIcon();

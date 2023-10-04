@@ -59,7 +59,7 @@ h1 {
 
 .logo {
     flex: 1;
-    /* Logo aligned to the left */
+    /* Logo alignment */
 }
 
 nav ul {
@@ -67,19 +67,17 @@ nav ul {
     display: flex;
     gap: 20px;
     justify-content: flex-end;
-    /* Align items to the right */
+    
 }
 
-/* Profile picture styles */
-.profile-picture {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 5px;
-    object-fit: cover;
+
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
 }
 
-/* Style the profile picture input label */
+/* profile picture input label */
 .profile-picture-label {
     display: flex;
     flex-direction: column;
@@ -91,12 +89,18 @@ nav ul {
     font-size: 14px;
 }
 
-/* Carousel styles */
-.carousel-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
+/* Profile picture  */
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    object-fit: cover;
 }
+
+
+
+
 
 
 .carousel-slide {
